@@ -90,7 +90,7 @@ $(document).ready(function(){
 	
 		if(greske.length){
 			if(!postoji){
-				$('<span id ="zagreske"></span>').appendTo(divZaFormu);
+				$('<span style="font-size:12px" id ="zagreske"></span>').appendTo(divZaFormu);
 				var spanZaGreske = document.getElementById("zagreske")
 				postoji = true;
 				for(i in greske){
