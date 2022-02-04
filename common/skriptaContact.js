@@ -4,8 +4,8 @@ $(document).ready(function(){
 	
 	var formaText = ["<div class='col-md-6'> <input id='firstname' class='mb-20' type='text' placeholder='First Name'>  </div>",
 	"<div class='col-md-6'> <input id='lastname' class='mb-20' type='text' placeholder='Last Name'>  </div>",
-	"<div class='col-md-6'><input id='password' class='mb-20' type='text' placeholder='Password'>  </div>",
-	"<div class='col-md-6'><input id='confirmpassword' class='mb-20' type='text' placeholder='Confirm Password'>  </div>"]
+	"<div class='col-md-6'><input id='password' class='mb-20' type='password' placeholder='Password'>  </div>",
+	"<div class='col-md-6'><input id='confirmpassword' class='mb-20' type='password' placeholder='Confirm Password'>  </div>"]
 	var divZaFormu = $('.row');
 	
 	for(i in formaText)
@@ -52,16 +52,16 @@ $(document).ready(function(){
 			var greske = [];
 		
 		if(!regIme.test(ime.value)) 
-				greske.push("First name is not in good format")
+				greske.push("First name must containe at least 1 uppercase letter at the beggining and has to be at least 3 letters long")
 		
 
 		
 		if(!regPrezime.test(prezime.value))		
-				greske.push("Last name is not in good format")
+				greske.push("Last name has to be at least 1 word with a uppercase letter at the beggining and be at least 3 letters long")
 		
 
 		if(!regSifra.test(sifra.value)){
-						greske.push("Password is not in good format")
+						greske.push("Password must contain 1 uppercase letter, 1 lowercase letter ,a number , 1 of these special caratcters (#?!@$%^&*-) and has to be at least 8 charcters long")
 		}
 	
 		if(sifra.value !=potsifra.value){
